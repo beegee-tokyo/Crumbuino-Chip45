@@ -17,10 +17,10 @@
 					"help": {
 						"online": "https://www.chip45.com/"
 					},
-					"url": "http://downloads.arduino.cc/cores/avr-1.8.3.tar.bz2",
-					"archiveFileName": "avr-1.8.3.tar.bz2",
-					"checksum": "SHA-256:de8a9b982477762d3d3e52fc2b682cdd8ff194dc3f1d46f4debdea6a01b33c14",
-					"size": "4941548",
+					"url": "https://github.com/beegee-tokyo/Crumbuino-Chip45/archive/1.0.0.tar.gz",
+					"archiveFileName": "1.0.0.tar.gz",
+					"checksum": "SHA-256:972D6686892DCB8E21EF51B62FCB3340647D3F9A5083FBAFD66B817C442A085E",
+					"size": "5253805",
 					"boards": [
 						{
 							"name": "Crumbuino Nano"

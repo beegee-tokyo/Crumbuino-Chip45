@@ -20,11 +20,9 @@ This BSP supports
 ----
 
 ### Crumbuino Nano - Arduino Pin Mapping
- | Connector Con1 | Connector Con2 |
- | :-: | :-: | 
- 
- | Pin# | Port | Arduino GPIO# / Function |     | Arduino GPIO# / Function | Port   | Pin# | 
+ | Connector Con1 |  |  |  |  |  | Connector Con2 |
  | :-:  | :-:  | :-:                      | :-: | :-:                      | :-:    | :-:  | 
+ | **Pin#** | **Port** | **Arduino GPIO# / Function** |     | **Arduino GPIO# / Function** | **Port**   | **Pin#** | 
  | 1    | PD0  | 0 / RX                   |     |                          | VCC    | 1    | 
  | 2    | PD1  | 1 / TX                   |     |                          | /RESET | 2    | 
  | 3    | PD2  | 2                        |     |                          | PC5    | 3    | 
@@ -54,11 +52,9 @@ Main differences to the Arduino Mega 2560 is a different pinout, no 5V regulator
 ----
 
 ### Crumbuino Mega - Arduino Pin Mapping
- | Connector Con1 | Connector Con2 |
- | :-: | :-: | 
- 
- | Pin# | Port   | Arduino GPIO# / Function |     | Arduino GPIO# / Function | Port | Pin# | 
+ | Connector Con1 |  |  |  |  |  | Connector Con2 |
  | :-:  | :-:    | :-:                      | :-: | :-:                      | :-:  | :-:  | 
+ | **Pin#** | **Port**   | **Arduino GPIO# / Function** |     | **Arduino GPIO# / Function** | **Port** | **Pin#** | 
  | 1    | TX     |                          |     |                          | VBUS | 48   | 
  | 2    | RX     |                          |     |                          | D-   | 47   | 
  | 3    | GND    |                          |     |                          | D+   | 46   | 
