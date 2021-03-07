@@ -5,7 +5,7 @@
 # For more info:
 # https://www.chip45.com/advanced_search_result.php?categories_id=0&keywords=crumbuino&inc_subcat=1
 
-name=Crumbuino
+name=Chip45 Crumbuino Boards
 version=1.0.0
 
 # AVR compile variables
