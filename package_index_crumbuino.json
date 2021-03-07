@@ -13,7 +13,7 @@
 					"name": "Chip45 Crumbuino Boards",
 					"architecture": "avr",
 					"version": "1.0.0",
-					"category": "Arduino",
+					"category": "Contributed",
 					"help": {
 						"online": "https://www.chip45.com/"
 					},
