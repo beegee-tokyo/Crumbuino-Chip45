@@ -4,6 +4,35 @@
 Arduino BSP for Crumbuino Nano and Crumbuino Mega    
 It is based on the [ArduinoCore-avr](https://github.com/arduino/ArduinoCore-avr)
 
+# Content
+- [BSP support](#bsp_support)
+   - [Crumbuino Nano](#crumbuino_nano)
+   - [Crumbuino Mega](#crumbuino_mega)
+- [Installation](#installation)
+- [Crumbuino Nano - Arduino Pin Mapping](#crumbuino_nano_-_arduino_pin_mapping)
+- [Crumbuino Mega - Arduino Pin Mapping](#crumbuino_mega_-_arduino_pin_mapping)
+
+----
+## BSP support 
+
+### Crumbuino Nano
+| [Crumbuino Nano](https://www.chip45.com/arduino-nano-module.html) | ![Crumbuino Nano](./assets/crumb328.jpg) |
+| :-: | :-: |
+
+ Crumbuino-Nano corresponds to our popular Crumb328 V2.3 module with the ATmega328P mikrocontroller and CP2102 USB UART converter. As Crumbuino-Nano version the module comes with Arduino bootloader preloaded and mounted 16MHz crystal. In this configuration it is comparable to Arduino Nano V3.0 module!
+
+----
+### Crumbuino Mega
+| [Crumbuino Mega](https://www.chip45.com/arduino-mega-module.html) | ![Crumbuino Nano](./assets/crumb2560.jpg)  |
+| :-: | :-: |
+
+ Crumbuino-Mega corresponds to our popular Crumb2560 V1.1 module with the ATmega2560 mikrocontroller and CP2102 USB UART converter. As Crumbuino-Mega version the module comes with Arduino bootloader preloaded and mounted 16MHz crystal. In this configuration it is comparable to Arduino Mega 2560 module!
+
+Due to the preloaded Arduino Bootloader and the integrated USB UART converter with mini-USB connector, the module can directly be used with the Arduino IDE as an e.g. Arduino Mega 2560 board.
+
+Main differences to the Arduino Mega 2560 is a different pinout, no 5V regulator (the Crumbuino-Mega can be supplied through USB) and the status LED is connected to a different pin. Additionally the Crumbuino-Mega provides RS232 and RS485 interfaces, which are disabled by default, so that the IO pins can be used for other purposes. 
+
+----
 ## Installation
 In ArduinoIDE Preferences open Preferences    
 ![Open preferences](./assets/install-1.png)    
@@ -29,25 +58,23 @@ Open Tools -> Boards Manager
 
 ----
 
-In Boards Manager type Crumbuino
-![Open BSP URLs](./assets/install-4.png)    
+In Boards Manager type Crumbuino, once you see the Crumbuino BSP, click on install.
+![Open BSP URLs](./assets/install-5.png)    
 
 ----
 
-Made by [Chip45](https://www.chip45.com)
+After the install is finished, you can select the Crumbuino Nano or Crumbuino Mega board and create your sketch.    
+![Open BSP URLs](./assets/install-6.png)    
 
 ----
-This BSP supports     
 
-## Crumbuino Nano
-| [Crumbuino Nano](https://www.chip45.com/arduino-nano-module.html) | ![Crumbuino Nano](./assets/crumb328.jpg) |
-| :-: | :-: |
+## Made by [Chip45](https://www.chip45.com)     
+![Crumbuino Nano](./assets/chip45.png)
 
- Crumbuino-Nano corresponds to our popular Crumb328 V2.3 module with the ATmega328P mikrocontroller and CP2102 USB UART converter. As Crumbuino-Nano version the module comes with Arduino bootloader preloaded and mounted 16MHz crystal. In this configuration it is comparable to Arduino Nano V3.0 module!
- 
+
 ----
 
-### Crumbuino Nano - Arduino Pin Mapping
+## Crumbuino Nano - Arduino Pin Mapping
  | Connector Con1 |  |  |  |  |  | Connector Con2 |
  | :-:  | :-:  | :-:                      | :-: | :-:                      | :-:    | :-:  | 
  | **Pin#** | **Port** | **Arduino GPIO# / Function** |     | **Arduino GPIO# / Function** | **Port**   | **Pin#** | 
@@ -67,19 +94,8 @@ This BSP supports
  | 14   | GND  | 16 / USART2_TX           |     | 13                       | PB5    | 14   | 
  
 ----
-## Crumbuino Mega
-| [Crumbuino Mega](https://www.chip45.com/arduino-mega-module.html) | ![Crumbuino Nano](./assets/crumb2560.jpg)  |
-| :-: | :-: |
 
- Crumbuino-Mega corresponds to our popular Crumb2560 V1.1 module with the ATmega2560 mikrocontroller and CP2102 USB UART converter. As Crumbuino-Mega version the module comes with Arduino bootloader preloaded and mounted 16MHz crystal. In this configuration it is comparable to Arduino Mega 2560 module!
-
-Due to the preloaded Arduino Bootloader and the integrated USB UART converter with mini-USB connector, the module can directly be used with the Arduino IDE as an e.g. Arduino Mega 2560 board.
-
-Main differences to the Arduino Mega 2560 is a different pinout, no 5V regulator (the Crumbuino-Mega can be supplied through USB) and the status LED is connected to a different pin. Additionally the Crumbuino-Mega provides RS232 and RS485 interfaces, which are disabled by default, so that the IO pins can be used for other purposes. 
-
-----
-
-### Crumbuino Mega - Arduino Pin Mapping
+## Crumbuino Mega - Arduino Pin Mapping
  | Connector Con1 |  |  |  |  |  | Connector Con2 |
  | :-:  | :-:    | :-:                      | :-: | :-:                      | :-:  | :-:  | 
  | **Pin#** | **Port**   | **Arduino GPIO# / Function** |     | **Arduino GPIO# / Function** | **Port** | **Pin#** | 
