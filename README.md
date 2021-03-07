@@ -5,12 +5,12 @@ Arduino BSP for Crumbuino Nano and Crumbuino Mega
 It is based on the [ArduinoCore-avr](https://github.com/arduino/ArduinoCore-avr)
 
 # Content
-- [BSP support](#bsp_support)
-   - [Crumbuino Nano](#crumbuino_nano)
-   - [Crumbuino Mega](#crumbuino_mega)
+- [BSP support](#bsp-support)
+   - [Crumbuino Nano](#crumbuino-nano)
+   - [Crumbuino Mega](#crumbuino-mega)
 - [Installation](#installation)
-- [Crumbuino Nano - Arduino Pin Mapping](#crumbuino_nano_-_arduino_pin_mapping)
-- [Crumbuino Mega - Arduino Pin Mapping](#crumbuino_mega_-_arduino_pin_mapping)
+- [Crumbuino Nano - Arduino Pin Mapping](#crumbuino-nano---arduino-pin-mapping)
+- [Crumbuino Mega - Arduino Pin Mapping](#crumbuino-mega---arduino-pin-mapping)
 
 ----
 ## BSP support 
