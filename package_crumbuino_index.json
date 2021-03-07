@@ -19,8 +19,8 @@
 					},
 					"url": "https://github.com/beegee-tokyo/Crumbuino-Chip45/archive/1.0.0.tar.gz?raw=true",
 					"archiveFileName": "1.0.0.tar.gz",
-					"checksum": "SHA-256:972D6686892DCB8E21EF51B62FCB3340647D3F9A5083FBAFD66B817C442A085E",
-					"size": "5253805",
+					"checksum": "SHA-256:56F8A3A6D81B8FAE42710D277F56D2B17CCDCF0167AFE84938635D33442235C2",
+					"size": "5529209",
 					"boards": [
 						{
 							"name": "Crumbuino Nano"
