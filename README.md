@@ -4,6 +4,34 @@
 Arduino BSP for Crumbuino Nano and Crumbuino Mega    
 It is based on the [ArduinoCore-avr](https://github.com/arduino/ArduinoCore-avr)
 
+## Installation
+In ArduinoIDE Preferences open Preferences    
+![Open preferences](./assets/install-1.png)    
+
+----
+
+In Preferences open `Additional Boards Manager URLs:` by clicking on the small icon on the right side    
+![Open BSP URLs](./assets/install-2.png)    
+
+----
+
+Add `https://raw.githubusercontent.com/beegee-tokyo/Crumbuino-Chip45/main/package_crumbuino_index.json` as a new line in the window.       
+![Open BSP URLs](./assets/install-3.png)    
+
+----
+
+Exit and restart Arduino IDE.     
+
+----
+
+Open Tools -> Boards Manager
+![Open BSP URLs](./assets/install-4.png)    
+
+----
+
+In Boards Manager type Crumbuino
+![Open BSP URLs](./assets/install-4.png)    
+
 ----
 
 Made by [Chip45](https://www.chip45.com)
