@@ -1,12 +1,12 @@
 
-# Arduino AVR Core and platform.
+# Crumbuino Core and platform.
 # ------------------------------
 #
 # For more info:
-# https://arduino.github.io/arduino-cli/latest/platform-specification/
+# https://www.chip45.com/advanced_search_result.php?categories_id=0&keywords=crumbuino&inc_subcat=1
 
-name=Arduino AVR Boards
-version=1.8.3
+name=Crumbuino
+version=1.0.0
 
 # AVR compile variables
 # ---------------------
