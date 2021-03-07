@@ -1,7 +1,7 @@
 {
 	"packages": [
 		{
-			"name": "arduino",
+			"name": "crambuino",
 			"maintainer": "Chip45",
 			"websiteURL": "https://chip45.com/",
 			"email": "info@chip45.com",
