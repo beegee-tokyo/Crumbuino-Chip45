@@ -46,6 +46,44 @@
 							"version": "1.3.0"
 						}
 					]
+				},
+				{
+					"name": "Chip45 Crumbuino Boards",
+					"architecture": "avr",
+					"version": "1.0.1",
+					"category": "Contributed",
+					"help": {
+						"online": "https://www.chip45.com/"
+					},
+					"url": "https://github.com/beegee-tokyo/Crumbuino-Chip45/archive/1.0.1.tar.gz?raw=true",
+					"archiveFileName": "1.0.1.tar.gz",
+					"checksum": "SHA-256:DEBD1A379558DAACD4D6E6C3F381A6B2CF496E869A9E6ACFE5BA8282FE4C1DD7",
+					"size": "5631510",
+					"boards": [
+						{
+							"name": "Crumbuino Nano"
+						},
+						{
+							"name": "Crumbuino Mega"
+						}
+					],
+					"toolsDependencies": [
+						{
+							"packager": "crumbuino",
+							"name": "avr-gcc",
+							"version": "7.3.0-atmel3.6.1-arduino7"
+						},
+						{
+							"packager": "crumbuino",
+							"name": "avrdude",
+							"version": "6.3.0-arduino17"
+						},
+						{
+							"packager": "crumbuino",
+							"name": "arduinoOTA",
+							"version": "1.3.0"
+						}
+					]
 				}
 			],
 			"tools": [
