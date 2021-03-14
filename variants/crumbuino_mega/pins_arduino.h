@@ -34,10 +34,10 @@
 #define analogInputToDigitalPin(p) ((p < 16) ? (p) + 68 : -1)
 #define digitalPinHasPWM(p) (((p) >= 2 && (p) <= 13) || ((p) >= 44 && (p) <= 46))
 
-#define PIN_SPI_SS (67)
-#define PIN_SPI_MOSI (65)
-#define PIN_SPI_MISO (64)
-#define PIN_SPI_SCK (62)
+#define PIN_SPI_SS (53)
+#define PIN_SPI_MOSI (51)
+#define PIN_SPI_MISO (50)
+#define PIN_SPI_SCK (52)
 
 static const uint8_t SS = PIN_SPI_SS;
 static const uint8_t MOSI = PIN_SPI_MOSI;
@@ -50,7 +50,7 @@ static const uint8_t SCK = PIN_SPI_SCK;
 static const uint8_t SDA = PIN_WIRE_SDA;
 static const uint8_t SCL = PIN_WIRE_SCL;
 
-#define LED_BUILTIN 63
+#define LED_BUILTIN 67 // PJ7
 
 #define PIN_A0 (68)
 #define PIN_A1 (69)
@@ -89,21 +89,21 @@ static const uint8_t A15 = PIN_A15;
 // A majority of the pins are NOT PCINTs, SO BE WARNED (i.e. you cannot use them as receive pins)
 // Only pins available for RECEIVE (TRANSMIT can be on any pin):
 // (I've deliberately left out pin mapping to the Hardware USARTs - seems senseless to me)
-// Pins: 10, 11, 12, 13,  64, 65, 66, 67,  74, 75, 76, 77, 78, 79, 80, 81
+// Pins: 10, 11, 12, 13,  50, 51, 52, 53,  74, 75, 76, 77, 78, 79, 80, 81
 
 #define digitalPinToPCICR(p) ((((p) >= 10) && ((p) <= 13)) ||         \
-									  (((p) >= 64) && ((p) <= 67)) || \
+									  (((p) >= 50) && ((p) <= 53)) || \
 									  (((p) >= 76) && ((p) <= 83))    \
 								  ? (&PCICR)                          \
 								  : ((uint8_t *)0))
 
-#define digitalPinToPCICRbit(p) ((((p) >= 10) && ((p) <= 13)) || (((p) >= 64) && ((p) <= 67)) ? 0 : \ 
+#define digitalPinToPCICRbit(p) ((((p) >= 10) && ((p) <= 13)) || (((p) >= 50) && ((p) <= 53)) ? 0 : \ 
                                 ((((p) >= 76) && ((p) <= 83)) ? 2 : 0))
 
-#define digitalPinToPCMSK(p) ((((p) >= 10) && ((p) <= 13)) || (((p) >= 64) && ((p) <= 67)) ? (&PCMSK0) :  \
+#define digitalPinToPCMSK(p) ((((p) >= 10) && ((p) <= 13)) || (((p) >= 50) && ((p) <= 53)) ? (&PCMSK0) :  \
                              ((((p) >= 76) && ((p) <= 83)) ? (&PCMSK2) : ((uint8_t *)0)))
 
-#define digitalPinToPCMSKbit(p) ((((p) >= 10) && ((p) <= 13)) ? ((p)-6) : (((p) == 64) ? 3 : (((p) == 65) ? 2 : (((p) == 66) ? 1 : (((p) == 67) ? 0 : ((((p) >= 76) && ((p) <= 83)) ? ((p)-76) : 0))))))
+#define digitalPinToPCMSKbit(p) ((((p) >= 10) && ((p) <= 13)) ? ((p)-6) : (((p) == 50) ? 3 : (((p) == 51) ? 2 : (((p) == 52) ? 1 : (((p) == 53) ? 0 : ((((p) >= 76) && ((p) <= 83)) ? ((p)-76) : 0))))))
 
 #define digitalPinToInterrupt(p) ((p) == 2 ? 0 : ((p) == 3 ? 1 : ((p) >= 18 && (p) <= 21 ? 23 - (p) : NOT_AN_INTERRUPT)))
 
@@ -210,24 +210,24 @@ const uint8_t PROGMEM digital_pin_to_port_PGM[] = {
 	PL, // PL 2 ** 47 ** D47
 	PL, // PL 1 ** 48 ** D48
 	PL, // PL 0 ** 49 ** D49
-	PE, // PE 2 ** 50 ** D50
-	PE, // PE 6 ** 51 ** D51
-	PE, // PE 7 ** 52 ** D52
-	PH, // PH 2 ** 53 ** D53
-	PH, // PH 7 ** 54 ** D54
-	PD, // PD 4 ** 55 ** D55
-	PD, // PD 5 ** 56 ** D56
-	PD, // PD 6 ** 57 ** D57
-	PJ, // PJ 2 ** 58 ** D58
-	PJ, // PJ 3 ** 59 ** D59
-	PJ, // PJ 4 ** 60 ** D60
-	PJ, // PJ 5 ** 61 ** D61
-	PJ, // PJ 6 ** 62 ** D62
-	PJ, // PJ 7 ** 63 ** D63
-	PB, // PB 3 ** 64 ** SPI_MISO
-	PB, // PB 2 ** 65 ** SPI_MOSI
-	PB, // PB 1 ** 66 ** SPI_SCK
-	PB, // PB 0 ** 67 ** SPI_SS
+	PB, // PB 3 ** 50 ** SPI_MISO
+	PB, // PB 2 ** 51 ** SPI_MOSI
+	PB, // PB 1 ** 52 ** SPI_SCK
+	PB, // PB 0 ** 53 ** SPI_SS
+	PE, // PE 2 ** 54 ** D50
+	PE, // PE 6 ** 55 ** D51
+	PE, // PE 7 ** 56 ** D52
+	PH, // PH 2 ** 57 ** D53
+	PH, // PH 7 ** 58 ** D54
+	PD, // PD 4 ** 59 ** D55
+	PD, // PD 5 ** 60 ** D56
+	PD, // PD 6 ** 61 ** D57
+	PJ, // PJ 2 ** 62 ** D58
+	PJ, // PJ 3 ** 63 ** D59
+	PJ, // PJ 4 ** 64 ** D60
+	PJ, // PJ 5 ** 65 ** D61
+	PJ, // PJ 6 ** 66 ** D62
+	PJ, // PJ 7 ** 67 ** D63
 	PF, // PF 0 ** 68 ** A0
 	PF, // PF 1 ** 69 ** A1
 	PF, // PF 2 ** 70 ** A2
@@ -299,24 +299,24 @@ const uint8_t PROGMEM digital_pin_to_bit_mask_PGM[] = {
 	_BV(2), // PL 2 ** 47 ** D47
 	_BV(1), // PL 1 ** 48 ** D48
 	_BV(0), // PL 0 ** 49 ** D49
-	_BV(2), // PE 2 ** 50 ** D50
-	_BV(6), // PE 6 ** 51 ** D51
-	_BV(7), // PE 7 ** 52 ** D52
-	_BV(2), // PH 2 ** 53 ** D53
-	_BV(7), // PH 7 ** 54 ** D54
-	_BV(4), // PD 4 ** 55 ** D55
-	_BV(5), // PD 5 ** 56 ** D56
-	_BV(6), // PD 6 ** 57 ** D57
-	_BV(2), // PJ 2 ** 58 ** D58
-	_BV(3), // PJ 3 ** 59 ** D59
-	_BV(4), // PJ 4 ** 60 ** D60
-	_BV(5), // PJ 5 ** 61 ** D61
-	_BV(6), // PJ 6 ** 62 ** D62
-	_BV(7), // PJ 7 ** 63 ** D63
-	_BV(3), // PB 3 ** 64 ** SPI_MISO
-	_BV(2), // PB 2 ** 65 ** SPI_MOSI
-	_BV(1), // PB 1 ** 66 ** SPI_SCK
-	_BV(0), // PB 0 ** 67 ** SPI_SS
+	_BV(3), // PB 3 ** 50 ** SPI_MISO
+	_BV(2), // PB 2 ** 51 ** SPI_MOSI
+	_BV(1), // PB 1 ** 52 ** SPI_SCK
+	_BV(0), // PB 0 ** 53 ** SPI_SS
+	_BV(2), // PE 2 ** 54 ** D50
+	_BV(6), // PE 6 ** 55 ** D51
+	_BV(7), // PE 7 ** 56 ** D52
+	_BV(2), // PH 2 ** 57 ** D53
+	_BV(7), // PH 7 ** 58 ** D54
+	_BV(4), // PD 4 ** 59 ** D55
+	_BV(5), // PD 5 ** 60 ** D56
+	_BV(6), // PD 6 ** 61 ** D57
+	_BV(2), // PJ 2 ** 62 ** D58
+	_BV(3), // PJ 3 ** 63 ** D59
+	_BV(4), // PJ 4 ** 64 ** D60
+	_BV(5), // PJ 5 ** 65 ** D61
+	_BV(6), // PJ 6 ** 66 ** D62
+	_BV(7), // PJ 7 ** 67 ** D63
 	_BV(0), // PF 0 ** 68 ** A0
 	_BV(1), // PF 1 ** 69 ** A1
 	_BV(2), // PF 2 ** 70 ** A2
@@ -388,24 +388,24 @@ const uint8_t PROGMEM digital_pin_to_timer_PGM[] = {
 	NOT_ON_TIMER, // PL 2 ** 47 ** D47
 	NOT_ON_TIMER, // PL 1 ** 48 ** D48
 	NOT_ON_TIMER, // PL 0 ** 49 ** D49
-	NOT_ON_TIMER, // PE 2 ** 50 ** D50
-	NOT_ON_TIMER, // PE 6 ** 51 ** D51
-	NOT_ON_TIMER, // PE 7 ** 52 ** D52
-	NOT_ON_TIMER, // PH 2 ** 53 ** D53
-	NOT_ON_TIMER, // PH 7 ** 54 ** D54
-	NOT_ON_TIMER, // PD 4 ** 55 ** D55
-	NOT_ON_TIMER, // PD 5 ** 56 ** D56
-	NOT_ON_TIMER, // PD 6 ** 57 ** D57
-	NOT_ON_TIMER, // PJ 2 ** 58 ** D58
-	NOT_ON_TIMER, // PJ 3 ** 59 ** D59
-	NOT_ON_TIMER, // PJ 4 ** 60 ** D60
-	NOT_ON_TIMER, // PJ 5 ** 61 ** D61
-	NOT_ON_TIMER, // PJ 6 ** 62 ** D62
-	NOT_ON_TIMER, // PJ 7 ** 63 ** D63
-	NOT_ON_TIMER, // PB 3 ** 64 ** SPI_MISO
-	NOT_ON_TIMER, // PB 2 ** 65 ** SPI_MOSI
-	NOT_ON_TIMER, // PB 1 ** 66 ** SPI_SCK
-	NOT_ON_TIMER, // PB 0 ** 67 ** SPI_SS
+	NOT_ON_TIMER, // PB 3 ** 50 ** SPI_MISO
+	NOT_ON_TIMER, // PB 2 ** 51 ** SPI_MOSI
+	NOT_ON_TIMER, // PB 1 ** 52 ** SPI_SCK
+	NOT_ON_TIMER, // PB 0 ** 53 ** SPI_SS
+	NOT_ON_TIMER, // PE 2 ** 54 ** D50
+	NOT_ON_TIMER, // PE 6 ** 55 ** D51
+	NOT_ON_TIMER, // PE 7 ** 56 ** D52
+	NOT_ON_TIMER, // PH 2 ** 57 ** D53
+	NOT_ON_TIMER, // PH 7 ** 58 ** D54
+	NOT_ON_TIMER, // PD 4 ** 59 ** D55
+	NOT_ON_TIMER, // PD 5 ** 60 ** D56
+	NOT_ON_TIMER, // PD 6 ** 61 ** D57
+	NOT_ON_TIMER, // PJ 2 ** 62 ** D58
+	NOT_ON_TIMER, // PJ 3 ** 63 ** D59
+	NOT_ON_TIMER, // PJ 4 ** 64 ** D60
+	NOT_ON_TIMER, // PJ 5 ** 65 ** D61
+	NOT_ON_TIMER, // PJ 6 ** 66 ** D62
+	NOT_ON_TIMER, // PJ 7 ** 67 ** D63
 	NOT_ON_TIMER, // PF 0 ** 68 ** A0
 	NOT_ON_TIMER, // PF 1 ** 69 ** A1
 	NOT_ON_TIMER, // PF 2 ** 70 ** A2
